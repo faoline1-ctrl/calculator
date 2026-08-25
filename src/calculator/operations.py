@@ -1,3 +1,6 @@
+from collections.abc import Callable
+
+
 def add(num1, num2):
     return num1 + num2
 
@@ -12,3 +15,26 @@ def divide(num1, num2):
 
 def remainder(num1, num2):
     return num1 % num2
+
+OPERATIONS: dict[str, Callable[[int, int], int | float]] = {
+    "add": add,
+    "+": add,
+    "subtract": subtract,
+    "-": subtract,
+    "multiply": multiply,
+    "*": multiply,
+    "divide": divide,
+    "/": divide,
+    "remainder": remainder,
+    "%": remainder
+}
+
+def operation_setup(operation: str) -> int | float | str:
+    if operation not in OPERATIONS:
+        return "Invalid input"
+
+    num1 = int(input("Enter first number\n"))
+    num2 = int(input("Enter second number\n"))
+
+    return OPERATIONS[operation](num1, num2)
+    
