@@ -1,0 +1,17 @@
+[project]
+name = "calculator"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "faoline1-ctrl", email = "faoline1@gmail.com" }
+]
+requires-python = ">=3.14.7"
+dependencies = []
+
+[project.scripts]
+calculator = "calculator:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
