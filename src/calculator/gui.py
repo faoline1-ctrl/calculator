@@ -1,4 +1,3 @@
-from tkinter import font
 import tkinter as tk
 from .operations import OPERATIONS
 
