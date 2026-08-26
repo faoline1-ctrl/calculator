@@ -1,10 +1,10 @@
 from .operations import *
-from .gui import create_app
+from .gui import CalculatorApp
 
 
 def main():
-
-    create_app()
+    app = CalculatorApp()
+    app.run()
 
 if __name__ == "__main__":
     main()
