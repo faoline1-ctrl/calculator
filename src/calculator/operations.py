@@ -29,11 +29,14 @@ OPERATIONS: dict[str, Callable[[int, int], int | float]] = {
     "%": remainder
 }
 
-def operation_setup(operation: str) -> int | float | str:
+def operation_setup(operation: str, prev_result: int | float | None = None) -> int | float | str:
     if operation not in OPERATIONS:
         return "Invalid input"
 
-    num1 = int(input("Enter first number\n"))
+    if prev_result == None:
+        num1 = int(input("Enter first number\n"))
+    else:
+        num1 = prev_result
     num2 = int(input("Enter second number\n"))
 
     return OPERATIONS[operation](num1, num2)
