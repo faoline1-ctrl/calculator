@@ -1,2 +1,2 @@
-def main() -> None:
-    print("Hello from calculator!")
+from .main import main
+

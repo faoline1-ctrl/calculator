@@ -10,7 +10,7 @@ requires-python = ">=3.14.7"
 dependencies = []
 
 [project.scripts]
-calculator = "calculator.main:main"
+calculator = "calculator:main"
 
 [build-system]
 requires = ["uv_build>=0.12.5,<0.13.0"]
